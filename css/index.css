@@ -1,81 +1,156 @@
-:root{
-    --accent-color:#FFFF00;
+body{
+    margin: 0;
+    padding: 0;
+    background: url('/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-*{
-    font-family: monospace;
+.taskbar-content{
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: 100px;
+    position: fixed;
+    z-index: 2;
+}
+.taskbar-background{
+    position:absolute ;
+    bottom: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.465);
+    backdrop-filter: blur(5px);
+    right: 0%;
+    height: 100px;
+}
+.panel-item{
+    height: 70px;
+    width: 70px;
+    margin: 15px;
+    background-color: red;
+    border: none;
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.taskbar-right{
+    right: 0%;
+    bottom: 0%;
+    height: 100px;
+    position: absolute;
+}
+.tray{
+    height: 70px;
+    margin: 15px;
+    width: 120px;
+}
+.section1{
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.465);
+    backdrop-filter: blur(5px);
+    top: 100%;
+    left: 0%;
+    right: 0%;
+}
+.section2{
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.586);
+    backdrop-filter: blur(10px);
+    top: 200%;
+    left: 0%;
+    right: 0%;
+}
+.section3{
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.689);
+    backdrop-filter: blur(15px);
+    top: 300%;
+    left: 0%;
+    right: 0%;
+}
+.main-desktop{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 100px;
+    right: 0%;
+    color: #aaa;
+}
+.window1{
+    background-color: rgba(0, 0, 0, 0.464);
+    backdrop-filter: blur(5px);
+    color: #ddd;
+    font-size: 34px;
+    display: table;
+    vertical-align:middle;
+    height: 400px;
+    position: absolute;
+    padding: 20px;
+    padding-left: 100px;
+    top: 100px;
+    width: 400px;
+    left: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-weight: bold;
+    border-right: 1px solid white;
+}
+.verticle-align-center{
+    display : table-cell;
+    vertical-align: middle;
+}
+.window2{
+    background-color: rgba(0, 0, 0, 0.464);
+    backdrop-filter: blur(5px);
+    color: #ddd;
+    font-size: 34px;
+    display: table;
+    vertical-align:middle;
+    height: 400px;
+    position: absolute;
+    padding: 20px;
+    padding-right: 100px;
+    width: 300px;
+    padding-left: 60px;
+    top: 100px;
+    left: 571px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+    border-left: 1px solid white;
+}
+.span-style-1{
+    font-weight: bolder;
     color: white;
 }
-body{
-    background-color: #222;
-    padding: 0;
-    margin: 0;
-}
-#non-fixed-header{
-    padding: 20px;
-    text-align: center;
-}
-.non-fixed-header-link{
-    margin: 10px;
-    text-decoration: none;
-    font-size: 17px;
-    border: 4px solid transparent;
-    padding: 5px;
-    border-radius: 4px;
-    transition:ease-in-out background-color 0.3s;
-}
-.non-fixed-header-link:hover{
-    background-color: #444;
-}
-#fixed-header{
-    margin: auto;
-    width: 60%;
-    border: 5px solid var(--accent-color);
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-#fixed-header-left-side{
+.window3{
+    position: absolute;
+    color: white;
     font-size: 24px;
+    bottom: 70px;
+    right: 200px;
+    background-color: rgba(0, 0, 0, 0.464);
+    padding: 30px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
 }
-#fixed-header-right-side{
-    font-size: 18px;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    white-space: nowrap;
-}
-#download-button{
-    margin: 3px;
-    font-size: 18px;
-    color: black;
-    background-color: var(--accent-color);
-    height:max-content;
+.download-button-1{
+    font-size: 24px;
+    color: white;
+    background: rgba(0,0,0, 0.222);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
     border: none;
-    margin-left: 20px;
 }
-.fixed-header-side-link{
-    padding: 3px;
-    text-decoration: none;
-}
-
-#section1{
-    margin: auto;
-    margin-top: 40px;
-    width: 70%;
-    padding: 60px;
-    height: 360px;
-}
-#section1-title-text{
-    font-size: 54px;
-}
-#section1-tagline{
-    font-size: 18px;
-}
-.main-body{
-    background-color: white;
-    color: black;
+.window4{
+    width: 560px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.464);
+    padding: 30px;
+    font-size: 24px;
 }
